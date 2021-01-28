@@ -15,7 +15,7 @@ document.getElementById("submit").addEventListener("click", ()=>{
         console.log(message);
         console.log(texte);
         
-        let auth =localStorage.getItem("token");
+        let auth =`Bearer ${localStorage.getItem("token")}`;
 
         fetch("https://slack.com/api/chat.postMessage", {
             method: "POST",
